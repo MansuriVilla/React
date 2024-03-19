@@ -1,0 +1,141 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+body {
+  background-color: #eaeaea;
+}
+/* basic style start */
+
+ul {
+  padding: 0px;
+}
+ul li {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+input,
+button {
+  border: 0px;
+  outline: none;
+  background-color: transparent;
+}
+
+/* basic style end */
+
+/* fonts from google start */
+
+.poppins-regular {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+}
+
+/* fonts from google end */
+.container {
+  display: flex;
+  flex-direction: column;
+  -ms-flex-direction: column;
+  gap: 50px;
+}
+
+.header {
+  position: relative;
+  z-index: 999;
+  margin: 0 auto;
+  width: 98.8%;
+}
+.header .header-contant {
+  padding: 30px;
+  position: absolute;
+  border-radius: 50px;
+  top: 10px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background-color: #ffffff60;
+  backdrop-filter: blur(50px);
+  justify-content: space-between;
+}
+.header-c-a {
+  font-size: 32px;
+  color: #000;
+}
+.header .header-ul {
+  display: flex;
+}
+.header .header-ul li {
+  margin: 0px 25px;
+}
+.header .header-ul li a {
+  color: #000;
+  font-weight: 600;
+}
+.header .header-ul li a:hover {
+  color: #fff;
+}
+.hero-main {
+  position: relative;
+}
+.hero-img {
+  height: 1000px;
+  width: 100%;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  border-radius: 50px;
+}
+.hero-img::before {
+  content: "";
+  height: 100%;
+  width: 100%;
+  display: block;
+  position: absolute;
+  background-color: #00000050;
+}
+.hero-main .hero-img .banner-text {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 1200px;
+}
+.hero-main .hero-img .banner-text h1 {
+  text-align: center;
+  color: #fff;
+}
+.footer {
+  width: 100%;
+  background-color: #000;
+  margin-top: 50px;
+  border-radius: 50px;
+}
+.footer .footer-inner {
+  padding: 30px;
+  display: flex;
+  gap: 320px;
+  flex-direction: column;
+}
+.footer .footer-inner .footer-top ul {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
+.footer .footer-inner .footer-top ul li a {
+  color: #000;
+  font-weight: 600;
+}
+.footer .footer-inner .footer-bottom {
+  text-align: center;
+}
+.footer .footer-inner .footer-bottom .footer-company-logo {
+  height: 100%;
+  max-width: 500px;
+  width: 100%;
+  position: relative;
+}
