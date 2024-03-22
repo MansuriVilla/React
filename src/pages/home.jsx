@@ -9,16 +9,16 @@ export default function Home() {
     const heroTitleElement = heroTitle.current;
     const text = new SplitType(heroTitleElement, { types: "lines" });
 
-    gsap.from(text.words, {
+    gsap.from(text.lines, {
       y: 20,
       opacity: 0,
-      stagger: 0.1,
+      stagger: 0.2,
     });
   }, []); // Run only once on component mount
 
   return (
     <>
-      <div className="hero" >
+      <div className="hero">
         <div className="hero-img">
           <img
             data-scroll
