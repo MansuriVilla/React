@@ -1,5 +1,6 @@
 import React, { useRef, useEffect, forwardRef } from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Analytics } from "@vercel/analytics/react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -112,23 +113,27 @@ const App = forwardRef((props, ref) => {
   }, [location, ref]);
 
   return (
-    <div id="main" className="smooth-scroll" data-scroll-container ref={main}>
-      <div className="main-inner">
-        <div className="hero-main">
-          <Header />
-          <div className="container">
-            <Routes>
-              <Route index element={<Home />} />
-              <Route path="/Home" element={<Home />} />
-              <Route path="/Support" element={<Support />} />
-              <Route path="/Aboutus" element={<Aboutus />} />
-              <Route path="/Ourproduct" element={<Ourproduct />} />
-            </Routes>
+    <>
+      <div id="main" className="smooth-scroll" data-scroll-container ref={main}>
+        <div className="main-inner">
+          <div className="hero-main">
+            <Header />
+            <div className="container">
+              <Routes>
+                <Route index element={<Home />} />
+                <Route path="/Home" element={<Home />} />
+                <Route path="/Support" element={<Support />} />
+                <Route path="/Aboutus" element={<Aboutus />} />
+                <Route path="/Ourproduct" element={<Ourproduct />} />
+              </Routes>
+            </div>
           </div>
         </div>
+        <Footer />
       </div>
-      <Footer />
-    </div>
+      <Analytics />
+      <SpeedInsights />
+    </>
   );
 });
 
