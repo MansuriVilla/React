@@ -1,7 +1,7 @@
 import React, { useRef, useEffect, forwardRef } from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
-import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import LocomotiveScroll from "locomotive-scroll";
